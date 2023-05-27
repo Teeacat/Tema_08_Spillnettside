@@ -1,7 +1,14 @@
 body{
-      height: 1000vh;
       margin: 0;
       background-color: black;
+}
+
+body * {
+      box-sizing: border-box;
+}
+
+img {
+      max-width: 100%;
 }
 
 /* Background */
@@ -19,6 +26,30 @@ body{
       align-items: center;
 }
 
+.page-section {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+}
+
+.section-separator-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+}
+
+.section-separator-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+}
 li {
       display: inline;
       padding: 20px;
@@ -35,6 +66,7 @@ li {
       max-height: 120px;
       opacity: 70%;
       backdrop-filter: blur(39px);
+      z-index: 90;
     }
 .logo{
       margin-left: 8%;
@@ -54,14 +86,6 @@ li {
     }
 
 /* Herobanner */
-
-.heroimg {
-      width:100%;
-      height: 1000px;
-      display: flex;
-      object-fit: cover;
-      
-}
 
 .title{
       position: absolute;
@@ -86,10 +110,18 @@ li {
 
 .trailer{
       text-align: center;
-      background-color: black;
       height: fit-content;
       padding: 60px 100px 150px;
-      
+}
+
+.trailer iframe {
+      width: 60vw;
+      max-width: 860px;
+      height: 30vw;
+}
+
+.black-background {
+      background-color: black;
 }
 
 .story{
@@ -97,21 +129,20 @@ li {
       background-color: black;
       height: fit-content;
       width: 50%;
-      padding: 20px 20px 400px 20px;
-      margin: auto;
-      z-index: -1;
+      padding: 20px;
+      padding-top: 60px;
       border-radius: 10px;
-
+      margin: 0 auto 0;
+      z-index: 80;
+      height: 100vh;
 }
 
 .team{
       text-align: left;
-      background-color: black;
-      height: fit-content;
       width: 50%;
-      padding: 20px 20vw 400px;
+      padding: 20px;
       margin: auto;
-
+      box-sizing: border-box;
 }
 
 footer{
@@ -125,3 +156,22 @@ footer{
 }
 
 
+@media screen and (max-width: 800px) {
+      .trailer, .team, .trailer, .herotxt, .story{
+            padding: 16px;
+            width: 100%;
+      }
+      .herotxt{
+            left: 0;
+            right: 0;
+      }
+      .title {
+            left: 0;
+            right: 0;
+
+      }
+      .trailer iframe {
+            height: 80vh;
+            width: 90vw;
+      }
+}
