@@ -38,7 +38,15 @@ img {
 
 .section-separator-bottom {
       position: absolute;
-      bottom: 0;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+}
+
+.section-separator-bottom_story {
+      position: absolute;
+      bottom: 50px;
       left: 0;
       right: 0;
       max-width: 100%;
@@ -188,20 +196,16 @@ footer{
       background-color:#283733;
       width: 100%;      
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
+      flex-direction:row;
       flex-wrap: wrap;
-      padding: 35px 100px 10px 100px;
-          
-      font-size: 20px;
+      padding: 10px 30px 10px 30px;
 
 }
 
 .footerupdates,
 .footer_social,
 .footer_contact {
-      padding: 20px;
+      padding: 40px;
 }
 
 .emailbutton{
@@ -237,7 +241,7 @@ input[type=text] {
     }
 
 .footer_social{
-      flex-direction: column;
+      box-sizing: border-box;
 }
 
 .discord_icon,
