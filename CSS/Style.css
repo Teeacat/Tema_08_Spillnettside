@@ -135,6 +135,8 @@ li {
 
 .black-background {
       background-color: black;
+      display: flex;
+      justify-content: flex-end;
 }
 
 .story{
@@ -198,19 +200,38 @@ footer{
       display: flex;
       flex-direction:row;
       flex-wrap: wrap;
-      padding: 10px 30px 10px 30px;
+      align-items: center;
+      justify-content: space-between;
 
 }
 
 .button_section{
-      padding-bottom: 200px;
+      padding-bottom: 150px;
 }
 
-.footerupdates,
-.footer_social,
-.footer_contact {
-      padding: 40px;
+.footer_Updates {
+      padding-left: 5%;
+      padding-right: 5%;
 }
+
+.footer_social {
+      padding-left: 10%;
+}
+
+.footer_contact {
+      padding-right: 5%;
+      padding-left: 5%;
+}
+
+.footertext {
+      font-size: 20px;
+}
+
+.discord_icon,
+.steam_icon {
+      width: 50px;
+}
+
 
 .emailbutton{
       background-color: black;
@@ -243,16 +264,6 @@ input[type=text] {
       border: 0.5px solid #28221B;
       margin: 15px;
     }
-
-.footer_social{
-      box-sizing: border-box;
-}
-
-.discord_icon,
-.steam_icon {
-      width: 50px;
-}
-
 
 @media screen and (max-width: 800px) {
       .trailer, .team, .trailer, .herotxt, .story{
